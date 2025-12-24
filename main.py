@@ -58,3 +58,4 @@ def list_tables():
 #to build: docker build -t fastapi-mssql .
 #to run: docker run -p 9000:8000 fastapi-mssql
 #if any port is busy docker rm -f $(docker ps -aq)
+#http://localhost:9000/tables

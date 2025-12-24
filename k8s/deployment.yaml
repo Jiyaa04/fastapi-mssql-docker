@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-mssql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-mssql
+  template:
+    metadata:
+      labels:
+        app: fastapi-mssql
+    spec:
+      containers:
+      - name: fastapi-mssql
+        image: fastapi-mssql:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
